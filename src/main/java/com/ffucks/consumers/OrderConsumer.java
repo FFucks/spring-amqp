@@ -21,6 +21,7 @@ public class OrderConsumer {
 
         System.out.println("Waiting for messages...");
 
+
         DeliverCallback callback = (tag, delivery) -> {
             String msg = new String(delivery.getBody());
             System.out.println("Received: " + msg);
