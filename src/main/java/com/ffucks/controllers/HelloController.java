@@ -18,6 +18,6 @@ public class HelloController {
     @PostMapping
     public String hello() {
         producer.send();
-        return "Message sent!!!";
+        return "Message_sent!!!";
     }
 }
