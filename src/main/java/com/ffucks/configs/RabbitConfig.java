@@ -14,11 +14,13 @@ public class RabbitConfig {
     public static final String EXCHANGE = "hello.exchange";
     public static final String ROUTING_KEY = "hello.key";
 
+    //Durable false if rabbitMQ restart que queue disapears
     @Bean
     Queue queue() {
         return new Queue(QUEUE, false);
     }
 
+    //Direct exchange, the message will only be queued if the routing key matches exactly.
     @Bean
     DirectExchange exchange() {
         return new DirectExchange(EXCHANGE);
